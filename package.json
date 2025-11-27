@@ -8,7 +8,8 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "build": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "build:ios": "eas build -p ios --profile production"
   },
   "dependencies": {
     "@expo/metro-runtime": "~6.1.2",
