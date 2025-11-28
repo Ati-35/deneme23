@@ -1,0 +1,10 @@
+
+> sigarabirakma@1.0.0 web
+> expo start --web --port 8085
+
+Starting project at C:\Users\Hakan\Desktop\ooo\SigaraBirakma
+Starting Metro Bundler
+Waiting on http://localhost:8085
+Logs for your project will appear below.
+Web node_modules\expo-router\entry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+Web Bundled 2432ms node_modules\expo-router\entry.js (2365 modules)
