@@ -44,7 +44,7 @@ const healthMetrics: HealthMetric[] = [
     value: 85,
     unit: '%',
     improvement: 8,
-    icon: 'lungs',
+    icon: 'medical',
     color: Colors.primary,
     description: 'Nefes alma kapasitesi',
     trend: 'up',
@@ -372,6 +372,7 @@ const styles = StyleSheet.create({
   },
   scrollContent: {
     paddingHorizontal: 20,
+    paddingBottom: 100, // Tab bar için alan
   },
   header: {
     marginTop: 10,

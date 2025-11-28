@@ -1,12 +1,8 @@
-// Typography System
-// Modern, consistent typography scale
-
+// Typography System - 2025 Modern Design
 import { Platform, TextStyle } from 'react-native';
 
 // Font family configuration
-// System fonts are used for performance - custom fonts can be added via expo-font
 export const FontFamily = {
-  // Sans-serif fonts
   regular: Platform.select({
     ios: 'System',
     android: 'Roboto',
@@ -27,7 +23,6 @@ export const FontFamily = {
     android: 'Roboto-Bold',
     default: 'System',
   }),
-  // Monospace for numbers
   mono: Platform.select({
     ios: 'Menlo',
     android: 'monospace',
@@ -44,44 +39,31 @@ export const FontWeight = {
   extrabold: '800' as TextStyle['fontWeight'],
 };
 
-// Font sizes following a modular scale
+// Font sizes
 export const FontSize = {
-  // Extra small
-  xs: 10,
-  // Small
-  sm: 12,
-  // Base/body
-  base: 14,
-  // Medium
-  md: 16,
-  // Large
-  lg: 18,
-  // Extra large
-  xl: 20,
-  // 2x large
-  '2xl': 24,
-  // 3x large
-  '3xl': 28,
-  // 4x large (display)
-  '4xl': 32,
-  // 5x large (hero)
-  '5xl': 40,
-  // 6x large (giant)
-  '6xl': 48,
-  // 7x large (massive)
-  '7xl': 64,
-  // 8x large (extra massive)
-  '8xl': 80,
+  xs: 11,
+  sm: 13,
+  base: 15,
+  md: 17,
+  lg: 19,
+  xl: 22,
+  '2xl': 26,
+  '3xl': 32,
+  '4xl': 38,
+  '5xl': 46,
+  '6xl': 56,
+  '7xl': 72,
+  '8xl': 88,
 };
 
 // Line heights
 export const LineHeight = {
   none: 1,
-  tight: 1.1,
-  snug: 1.2,
-  normal: 1.4,
-  relaxed: 1.5,
-  loose: 1.625,
+  tight: 1.15,
+  snug: 1.25,
+  normal: 1.5,
+  relaxed: 1.6,
+  loose: 1.75,
 };
 
 // Letter spacing
@@ -96,7 +78,7 @@ export const LetterSpacing = {
 
 // Typography presets
 export const Typography = {
-  // Display - For hero sections and large numbers
+  // Display
   display: {
     large: {
       fontSize: FontSize['7xl'],
@@ -134,7 +116,7 @@ export const Typography = {
     } as TextStyle,
     h3: {
       fontSize: FontSize.xl,
-      fontWeight: FontWeight.semibold,
+      fontWeight: FontWeight.bold,
       lineHeight: FontSize.xl * LineHeight.normal,
       letterSpacing: LetterSpacing.normal,
     } as TextStyle,
@@ -180,7 +162,7 @@ export const Typography = {
     } as TextStyle,
   },
   
-  // Labels (buttons, form labels)
+  // Labels
   label: {
     large: {
       fontSize: FontSize.md,
@@ -202,23 +184,29 @@ export const Typography = {
     } as TextStyle,
   },
   
-  // Captions and helper text
+  // Captions
   caption: {
     large: {
       fontSize: FontSize.sm,
-      fontWeight: FontWeight.regular,
+      fontWeight: FontWeight.medium,
       lineHeight: FontSize.sm * LineHeight.normal,
       letterSpacing: LetterSpacing.normal,
     } as TextStyle,
     medium: {
       fontSize: FontSize.xs,
-      fontWeight: FontWeight.regular,
+      fontWeight: FontWeight.medium,
       lineHeight: FontSize.xs * LineHeight.normal,
+      letterSpacing: LetterSpacing.normal,
+    } as TextStyle,
+    small: {
+      fontSize: 10,
+      fontWeight: FontWeight.regular,
+      lineHeight: 10 * LineHeight.normal,
       letterSpacing: LetterSpacing.normal,
     } as TextStyle,
   },
   
-  // Special - Statistics and numbers
+  // Stats
   stat: {
     hero: {
       fontSize: FontSize['8xl'],
@@ -228,7 +216,7 @@ export const Typography = {
     } as TextStyle,
     large: {
       fontSize: FontSize['4xl'],
-      fontWeight: FontWeight.bold,
+      fontWeight: FontWeight.extrabold,
       lineHeight: FontSize['4xl'] * LineHeight.tight,
       letterSpacing: LetterSpacing.tight,
     } as TextStyle,
@@ -240,7 +228,7 @@ export const Typography = {
     } as TextStyle,
     small: {
       fontSize: FontSize.lg,
-      fontWeight: FontWeight.semibold,
+      fontWeight: FontWeight.bold,
       lineHeight: FontSize.lg * LineHeight.tight,
       letterSpacing: LetterSpacing.normal,
     } as TextStyle,
@@ -274,7 +262,7 @@ export const Typography = {
   // Badge/tag text
   badge: {
     fontSize: FontSize.xs,
-    fontWeight: FontWeight.semibold,
+    fontWeight: FontWeight.bold,
     lineHeight: FontSize.xs * LineHeight.normal,
     letterSpacing: LetterSpacing.wider,
     textTransform: 'uppercase',
@@ -291,7 +279,3 @@ export const Typography = {
 };
 
 export default Typography;
-
-
-
-

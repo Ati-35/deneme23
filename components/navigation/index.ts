@@ -6,3 +6,6 @@ export { AnimatedTabBar, SimpleTabBar, defaultTabs } from './AnimatedTabBar';
 
 
 
+
+
+

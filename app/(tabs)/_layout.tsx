@@ -30,23 +30,25 @@ function TabIcon({
   const rotateAnim = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
+    const useNative = Platform.OS !== 'web';
+    
     Animated.parallel([
       Animated.spring(scaleAnim, {
         toValue: focused ? 1.15 : 1,
-        useNativeDriver: true,
+        useNativeDriver: useNative,
         tension: 300,
         friction: 10,
       }),
       Animated.spring(translateYAnim, {
         toValue: focused ? -6 : 0,
-        useNativeDriver: true,
+        useNativeDriver: useNative,
         tension: 300,
         friction: 10,
       }),
       Animated.timing(glowAnim, {
         toValue: focused ? 1 : 0,
         duration: 250,
-        useNativeDriver: true,
+        useNativeDriver: useNative,
       }),
     ]).start();
 
@@ -57,12 +59,12 @@ function TabIcon({
           Animated.timing(rotateAnim, {
             toValue: 1,
             duration: 1000,
-            useNativeDriver: true,
+            useNativeDriver: useNative,
           }),
           Animated.timing(rotateAnim, {
             toValue: 0,
             duration: 1000,
-            useNativeDriver: true,
+            useNativeDriver: useNative,
           }),
         ])
       ).start();
@@ -184,18 +186,27 @@ export default function TabLayout() {
           borderTopRightRadius: BorderRadius['3xl'],
         },
         tabBarLabelStyle: {
-          fontSize: 10,
-          fontWeight: '700',
-          marginTop: 4,
-          letterSpacing: 0.5,
+          fontSize: 11,
+          fontWeight: '600',
+          marginTop: 2,
+          letterSpacing: -0.2,
+          fontFamily: Platform.select({ 
+            ios: 'System', 
+            android: 'Roboto', 
+            web: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif' 
+          }),
         },
+        tabBarShowLabel: true,
+        tabBarAllowFontScaling: false,
         tabBarItemStyle: {
           paddingVertical: 4,
         },
       }}
       screenListeners={{
         tabPress: () => {
-          Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+          if (Platform.OS !== 'web') {
+            Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+          }
         },
       }}
     >

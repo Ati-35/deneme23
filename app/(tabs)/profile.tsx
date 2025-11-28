@@ -432,6 +432,7 @@ const styles = StyleSheet.create({
   },
   scrollContent: {
     paddingHorizontal: Spacing.lg,
+    paddingBottom: 100, // Tab bar için alan
   },
   header: {
     flexDirection: 'row',

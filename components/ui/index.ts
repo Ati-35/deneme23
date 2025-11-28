@@ -16,6 +16,5 @@ export type { BadgeVariant, BadgeColor, BadgeSize } from './Badge';
 // Progress components
 export { LinearProgress, CircularProgress, RadialProgress, StepProgress } from './Progress';
 
-
-
-
+// Loading components
+export { LoadingSpinner, Skeleton, SkeletonCard } from './LoadingSpinner';

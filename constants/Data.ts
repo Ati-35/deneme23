@@ -58,7 +58,7 @@ export const healthMilestones: HealthMilestone[] = [
     time: '1-9 ay',
     title: 'Öksürük Azalır',
     description: 'Öksürük ve nefes darlığı azalır.',
-    icon: 'lungs',
+    icon: 'medical',
     color: '#3B82F6',
   },
   {

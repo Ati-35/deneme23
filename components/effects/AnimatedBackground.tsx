@@ -303,7 +303,7 @@ export function AnimatedBackground({
   };
 
   return (
-    <View style={styles.container} pointerEvents="none">
+    <View style={[styles.container, { pointerEvents: 'none' }]}>
       {variant === 'particles' && renderParticles()}
       {variant === 'mesh' && renderMesh()}
       {variant === 'aurora' && renderAurora()}

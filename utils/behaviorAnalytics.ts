@@ -529,3 +529,6 @@ export const getInsightIcon = (type: string): string => {
 
 
 
+
+
+

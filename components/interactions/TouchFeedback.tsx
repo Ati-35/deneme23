@@ -18,8 +18,13 @@ import { Duration, Opacity, BorderRadius, Spacing } from '../../constants/Design
 // Haptic feedback types
 export type HapticType = 'light' | 'medium' | 'heavy' | 'success' | 'warning' | 'error' | 'selection';
 
-// Trigger haptic feedback
+// Trigger haptic feedback (disabled on web)
 export const triggerHaptic = (type: HapticType = 'light') => {
+  // Skip haptic feedback on web platform
+  if (Platform.OS === 'web') {
+    return;
+  }
+  
   switch (type) {
     case 'light':
       Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);

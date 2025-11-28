@@ -1,6 +1,4 @@
-// Design Tokens
-// Unified design system constants for spacing, borders, animations
-
+// Design Tokens - 2025 Modern Design System
 import { Dimensions, Platform } from 'react-native';
 
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get('window');
@@ -10,17 +8,17 @@ export const Spacing = {
   none: 0,
   xs: 4,
   sm: 8,
-  md: 12,
-  base: 16,
-  lg: 20,
-  xl: 24,
-  '2xl': 32,
-  '3xl': 40,
-  '4xl': 48,
-  '5xl': 64,
-  '6xl': 80,
-  '7xl': 96,
-  '8xl': 128,
+  md: 16,
+  base: 20,
+  lg: 24,
+  xl: 32,
+  '2xl': 40,
+  '3xl': 48,
+  '4xl': 56,
+  '5xl': 72,
+  '6xl': 96,
+  '7xl': 112,
+  '8xl': 144,
 };
 
 // Border radius scale
@@ -31,8 +29,8 @@ export const BorderRadius = {
   md: 12,
   lg: 16,
   xl: 20,
-  '2xl': 24,
-  '3xl': 32,
+  '2xl': 28,
+  '3xl': 36,
   full: 9999,
 };
 
@@ -47,99 +45,88 @@ export const BorderWidth = {
 
 // Icon sizes
 export const IconSize = {
-  xs: 12,
-  sm: 16,
-  md: 20,
-  base: 24,
-  lg: 28,
-  xl: 32,
-  '2xl': 40,
-  '3xl': 48,
-  '4xl': 64,
+  xs: 14,
+  sm: 18,
+  md: 22,
+  base: 26,
+  lg: 30,
+  xl: 36,
+  '2xl': 44,
+  '3xl': 52,
+  '4xl': 68,
 };
 
 // Avatar/Image sizes
 export const AvatarSize = {
-  xs: 24,
-  sm: 32,
-  md: 40,
-  base: 48,
-  lg: 56,
-  xl: 64,
-  '2xl': 80,
-  '3xl': 96,
-  '4xl': 128,
+  xs: 28,
+  sm: 36,
+  md: 44,
+  base: 52,
+  lg: 60,
+  xl: 72,
+  '2xl': 88,
+  '3xl': 104,
+  '4xl': 136,
 };
 
 // Component heights
 export const ComponentHeight = {
-  // Buttons
-  buttonSmall: 32,
-  buttonMedium: 44,
-  buttonLarge: 52,
-  
-  // Inputs
-  inputSmall: 36,
-  inputMedium: 48,
-  inputLarge: 56,
-  
-  // Tab bar
-  tabBar: Platform.OS === 'ios' ? 88 : 70,
-  tabBarPaddingBottom: Platform.OS === 'ios' ? 30 : 10,
-  
-  // Headers
-  headerSmall: 44,
-  headerMedium: 56,
-  headerLarge: 64,
-  
-  // Cards
-  cardMinHeight: 80,
-  cardImageHeight: 180,
-  
-  // List items
-  listItemSmall: 48,
-  listItemMedium: 60,
-  listItemLarge: 72,
+  buttonSmall: 36,
+  buttonMedium: 48,
+  buttonLarge: 56,
+  inputSmall: 40,
+  inputMedium: 52,
+  inputLarge: 60,
+  tabBar: Platform.OS === 'ios' ? 88 : 72,
+  tabBarPaddingBottom: Platform.OS === 'ios' ? 30 : 12,
+  headerSmall: 48,
+  headerMedium: 60,
+  headerLarge: 72,
+  cardMinHeight: 88,
+  cardImageHeight: 200,
+  listItemSmall: 52,
+  listItemMedium: 64,
+  listItemLarge: 80,
+  quickActionButton: 88,
+  quickActionButtonIcon: 36,
+  statCard: 96,
+  statCardIcon: 44,
 };
 
 // Screen dimensions
 export const Screen = {
   width: SCREEN_WIDTH,
   height: SCREEN_HEIGHT,
-  padding: Spacing.lg,
-  maxContentWidth: 428, // iPhone 14 Pro Max width
+  padding: 24,
+  paddingHorizontal: 24,
+  paddingVertical: 20,
+  maxContentWidth: 428,
 };
 
 // Animation durations
 export const Duration = {
   instant: 0,
-  fastest: 100,
-  fast: 150,
-  normal: 200,
-  slow: 300,
-  slower: 400,
-  slowest: 500,
-  // Complex animations
-  pageTransition: 350,
-  modalOpen: 300,
-  modalClose: 200,
-  ripple: 400,
-  skeleton: 1500,
+  fastest: 80,
+  fast: 120,
+  normal: 180,
+  slow: 250,
+  slower: 350,
+  slowest: 450,
+  pageTransition: 300,
+  modalOpen: 250,
+  modalClose: 180,
+  ripple: 350,
+  skeleton: 1200,
 };
 
-// Animation easing (for Animated API)
+// Animation easing
 export const Easing = {
-  // Standard easings
   linear: [0, 0, 1, 1] as const,
   easeIn: [0.42, 0, 1, 1] as const,
   easeOut: [0, 0, 0.58, 1] as const,
   easeInOut: [0.42, 0, 0.58, 1] as const,
-  
-  // Emphasized easings
   emphasizedDecelerate: [0.05, 0.7, 0.1, 1] as const,
   emphasizedAccelerate: [0.3, 0, 0.8, 0.15] as const,
-  
-  // Spring-like
   spring: [0.175, 0.885, 0.32, 1.275] as const,
   bounce: [0.68, -0.55, 0.265, 1.55] as const,
 };
@@ -151,14 +138,10 @@ export const Opacity = {
   medium: 0.54,
   high: 0.87,
   full: 1,
-  
-  // Overlay opacities
   overlayLight: 0.3,
   overlayMedium: 0.5,
   overlayHeavy: 0.7,
   overlayDark: 0.85,
-  
-  // Hover/Press states
   hover: 0.08,
   focus: 0.12,
   pressed: 0.16,
@@ -180,74 +163,80 @@ export const ZIndex = {
 
 // Hit slop (for touchable areas)
 export const HitSlop = {
-  small: { top: 4, right: 4, bottom: 4, left: 4 },
-  medium: { top: 8, right: 8, bottom: 8, left: 8 },
-  large: { top: 12, right: 12, bottom: 12, left: 12 },
-  extraLarge: { top: 16, right: 16, bottom: 16, left: 16 },
+  small: { top: 6, right: 6, bottom: 6, left: 6 },
+  medium: { top: 10, right: 10, bottom: 10, left: 10 },
+  large: { top: 14, right: 14, bottom: 14, left: 14 },
+  extraLarge: { top: 20, right: 20, bottom: 20, left: 20 },
 };
 
 // Card variants configuration
 export const CardConfig = {
-  // Padding variants
   padding: {
-    compact: Spacing.md,
-    normal: Spacing.base,
-    relaxed: Spacing.xl,
+    compact: 16,
+    normal: 20,
+    relaxed: 24,
   },
-  
-  // Border radius variants
   radius: {
-    sharp: BorderRadius.sm,
-    normal: BorderRadius.lg,
-    round: BorderRadius.xl,
+    sharp: 8,
+    normal: 16,
+    round: 28,
   },
-  
-  // Gap between cards
   gap: {
-    compact: Spacing.sm,
-    normal: Spacing.md,
-    relaxed: Spacing.base,
+    compact: 8,
+    normal: 16,
+    relaxed: 20,
   },
 };
 
 // Button variants configuration
 export const ButtonConfig = {
-  // Size configurations
   sizes: {
     small: {
-      height: ComponentHeight.buttonSmall,
-      paddingHorizontal: Spacing.md,
-      iconSize: IconSize.sm,
-      fontSize: 12,
+      height: 36,
+      paddingHorizontal: 16,
+      iconSize: 18,
+      fontSize: 13,
     },
     medium: {
-      height: ComponentHeight.buttonMedium,
-      paddingHorizontal: Spacing.base,
-      iconSize: IconSize.md,
-      fontSize: 14,
+      height: 48,
+      paddingHorizontal: 20,
+      iconSize: 22,
+      fontSize: 15,
     },
     large: {
-      height: ComponentHeight.buttonLarge,
-      paddingHorizontal: Spacing.xl,
-      iconSize: IconSize.base,
-      fontSize: 16,
+      height: 56,
+      paddingHorizontal: 24,
+      iconSize: 26,
+      fontSize: 17,
     },
   },
-  
-  // Border radius
   radius: {
-    square: BorderRadius.sm,
-    rounded: BorderRadius.md,
-    pill: BorderRadius.full,
+    square: 8,
+    rounded: 12,
+    pill: 9999,
   },
 };
 
-// Safe area insets (approximate, actual values from useSafeAreaInsets)
+// Safe area insets
 export const SafeArea = {
   top: Platform.OS === 'ios' ? 44 : 24,
   bottom: Platform.OS === 'ios' ? 34 : 0,
   left: 0,
   right: 0,
+};
+
+// Grid system
+export const Grid = {
+  columns: 2,
+  gap: 16,
+  itemHeight: 88,
+};
+
+// Section spacing
+export const SectionSpacing = {
+  betweenSections: 32,
+  betweenCards: 16,
+  headerMarginBottom: 16,
 };
 
 export default {
@@ -266,8 +255,6 @@ export default {
   CardConfig,
   ButtonConfig,
   SafeArea,
+  Grid,
+  SectionSpacing,
 };
-
-
-
-

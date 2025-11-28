@@ -22,6 +22,9 @@ export * from './interactions';
 // Navigation Components
 export * from './navigation';
 
+// Celebration Components
+export * from './celebrations';
+
 // Existing Components
 export * from './SkeletonLoader';
 export * from './QuizSystem';
